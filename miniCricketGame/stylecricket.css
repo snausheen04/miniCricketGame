@@ -1,0 +1,94 @@
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body{
+	font :15px 1.5 Arial, Helvetica Sans-serif;
+	line-height: 1.6;
+	padding: 0;
+	margin: 0;
+	background-color:#f4f4f4 ; 
+}
+.container{
+	max-width: 1100px;
+	margin: auto;
+	overflow: hidden;
+	padding: 0 2 rem;
+	text-align:center;
+}
+
+.header {
+	font-style: Sans-serif;
+	text-align: center;
+	margin: 1rem 0;
+}
+
+.header h1 {
+	margin-bottom: 1rem;
+}
+
+/*.score {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	font-size: 1.2rem;
+}*/
+
+/*.score p:first-child {
+	background: var(--primary-color);
+}
+
+.score p:last-child {
+	background: var (--dark-color);
+}*/
+
+.choices {
+	display: : grid;
+	grid-template-columns: repeat(1flr);
+	grid-gap: 5rem;
+	margin-top: 4rem;
+	text-align: center;
+}
+
+.choice {
+	cursor: pointer;
+}
+
+
+@media(max-width: 700px) {
+	.choice {
+		font-size: 110px;
+	}
+}
+
+@media(max-width: 500px) {
+	.choice {
+		font-size: 110px;
+	}
+}
+
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+}
+
+.row {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.dialog {
+	padding-left: 50px;
+	border: solid gray 2px;
+	border-radius: 100px;
+
+}
+ ::backdrop,
+ dialog + .backdrop {
+ 	background-color: rgba(0, 0, 0, 0.2);
+ }
+
+

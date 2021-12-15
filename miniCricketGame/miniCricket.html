@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylecricket.css">
+  <script src="cricket.js"></script>
+  <title>Mini Cricket</title> 
+</head>
+<body>
+  <div class="container">
+    <header class="=header">
+      <h1>Mini Cricket</h1>
+      <h2>Let's Play mini cricket</h2>
+      <h4><div id ="target" class ="target"></div></h4>
+      <div id="score" class="score"></div>
+      <div id="balls" class="balls"></div>
+        <div id ="playerChoice" class ="playerChoice"></div>
+        <div id ="computerChoice" class ="computerChoice"></div>
+    </header>
+    <br>
+    <h4>Rules of the Game</h4>
+    <p>Computer is on the balling side and you are on the batting side.</p>
+    <p>Computer chooses a random Target runs.</p>
+    <p>Balls are your chances to smash the score. Each time you get 12 balls. </p>
+    <p>You have to make selection for number of runs by choosing from 1, 2, 3, 4, 5 runs and 6 runs(thumbs up)</p>
+    <p>If you reach the target before balls exhaust, you win!</p>
+    <p>If you reach score but computer matches your selection, hard luck! it's a draw.</p>
+    <p>If the computer's selection matches your selection, you lose!!</p>
+    <h2>Make your Selection</h2>
+   
+      <div class = "row">
+      <div class = "column">
+      <img src="1images/one.png" onclick="TestPlay('one')" width="150" height="150">
+      </div>
+      <div class = "column">
+      <img src="1images/two.png" onclick="TestPlay('two')"  width="150" height="150">
+      </div>
+      <div class = "column">
+      <img src="1images/three.png" onclick="TestPlay('three')"  width="150" height="150">
+      </div>
+      <div class = "column">
+      <img src="1images/four.png" onclick="TestPlay('Four')"  width="150" height="150">
+      </div>
+      <div class = "column">
+      <img src="1images/five.png" onclick="TestPlay('five')" width="150" height="150">
+      </div>
+      <div class = "column">
+      <img src="1images/six.png" onclick="TestPlay('six')" width="150" height="150">
+    </div> 
+  </div>
+
+<div class = "modal"><dialog id ="myDialog" class ="modal"> Oops!Duck out' Computer Won!! </dialog></div>
+<div class = "modal"><dialog id ="myDialog1" class ="modal"> WOW!! Great Match! </dialog></div>
+<div class = "modal"><dialog id ="myDialog2" class ="modal"> It's a Draw </dialog></div>
+  
+</body>
+</html>
+
+
+<script type="text/javascript">
+        var mySVG = document.getElementById("MyDrawing");
+        var addButton = document.querySelector("#addButton");
+        addButton.addEventListener("click", function(){
+            console.log("added click");
+            mySVG.appendChild(randomSquare());
+             });
+        var maxSize = 50,
+          maxX = 500,
+          maxY = 300;
+
+        function randomSquare() {
+          let x = Math.random()*(maxX - maxSize);
+          let y = Math.random()*(maxY - maxSize);
+          let width = Math.random()*maxSize;
+          let square = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+          square.setAttribute("x", x);
+          square.setAttribute("y", y);
+          square.setAttribute("width", width);
+          square.setAttribute("height", width);
+
+          let colorStr = `rgb(${255*Math.random()}, ${255*Math.random()}, ${255*Math.random()})`;
+          square.setAttribute("fill", colorStr);
+          square.setAttribute("fill-opacity", 0.7);
+          return square;
+        }
+      </script>
+
+      <script type="text/javascript">
+      var table = document.getElementById('table');
+let data = Object.keys(events[0]);
+let thead = table.createTHead();
+let row = thead.insertRow();
+
+// let first row = n;
+let headerdata = data.map(function (n) {
+    var th = document.createElement("th");
+    var text = document.createTextNode(n);
+    th.appendChild(text);
+    return row.appendChild(th);
+});
+
+let tabledat1 = events.map(function (k) {
+    let row = table.insertRow();
+    // let record = k;
+    let data1 = Object.values(k);
+
+    let tabledat = data1.map(function (l) {
+        let cell = row.insertCell();
+        let text = document.createTextNode(l);
+        return cell.appendChild(text);
+    });
+});
+</script>
